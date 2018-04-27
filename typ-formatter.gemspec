@@ -6,4 +6,5 @@ Gem::Specification.new do |g|
   g.authors = ['Anatoly Chernow']
 
   g.add_dependency 'rainbow'
+  g.add_dependency 'string-indent'
 end

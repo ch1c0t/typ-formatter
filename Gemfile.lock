@@ -3,6 +3,7 @@ PATH
   specs:
     typ-formatter (0.0.0)
       rainbow
+      string-indent
 
 GEM
   remote: https://rubygems.org/

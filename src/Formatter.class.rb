@@ -1,3 +1,4 @@
+require 'string/indent'
 require 'rainbow'
 
 def initialize typ
@@ -5,7 +6,7 @@ def initialize typ
   @string = if typ.ok?
               Rainbow(name).green
             else
-              Rainbow(name).red + "\n" + format_gates_of(typ)
+              Rainbow(name).red + "\n" + format_gates_of(typ).indent(2)
             end
 end
 
@@ -16,7 +17,7 @@ end
 private
   def format_gates_of typ
     typ.gates.map do |gate|
-      "  #{format_gate gate}"
+      format_gate gate
     end.join "\n"
   end
 
