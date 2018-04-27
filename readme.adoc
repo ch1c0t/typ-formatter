@@ -1,0 +1,22 @@
+== Development
+
+To build:
+
+[source,bash]
+----
+bundle exec bgem
+----
+
+To run the specs:
+
+[source,bash]
+----
+bundle exec rspec
+----
+
+To perform mutation analysis:
+
+[source,bash]
+----
+bundle exec mutant --use rspec 'Typ*'
+----
