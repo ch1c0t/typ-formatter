@@ -16,4 +16,21 @@ describe Typ::Formatter do
       assert { f.to_s == two_red_lines }
     end
   end
+
+  context 'a Typ containing an internal Typ' do
+    it 'works' do
+      expected = <<~S.chomp
+        #{Rainbow('WithInternalTyp').red}
+          #{Rainbow('is [:>, 0]').green}
+          #{Rainbow('BiggerAndSmallerThanZero').red}
+            #{Rainbow('is [:>, 0]').green}
+            #{Rainbow('is [:<, 0]').red}
+      S
+
+      typ = WithInternalTyp.new 1
+      f = Typ::Formatter.new typ
+
+      expect(f.to_s).to eq expected
+    end
+  end
 end

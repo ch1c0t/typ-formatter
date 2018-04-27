@@ -2,11 +2,11 @@ require 'string/indent'
 require 'rainbow'
 
 def initialize typ
-  name = typ.class.name
+  k = typ.class
   @string = if typ.ok?
-              Rainbow(name).green
+              Rainbow(k).green
             else
-              Rainbow(name).red + "\n" + format_gates_of(typ).indent(2)
+              Rainbow(k).red + "\n" + format_gates_of(typ).indent(2)
             end
 end
 
@@ -24,8 +24,8 @@ private
   def format_gate gate
     case gate
     when Typ
-      self.class.new(gate).to_s
-    when Typ::Is::Array
+      self.class.new gate
+    when Is::Array
       format_is_array gate
     end
   end
