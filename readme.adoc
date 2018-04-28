@@ -18,5 +18,5 @@ To perform mutation analysis:
 
 [source,bash]
 ----
-bundle exec mutant --use rspec 'Typ*'
+bundle exec mutant --use rspec 'Typ::Formatter*'
 ----

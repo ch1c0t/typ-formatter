@@ -3,7 +3,8 @@ require 'typ/formatter'
 
 def format typ, it
   puts Typ::Formatter.new typ.new it
-  puts
+  puts '=================='
+  2.times { puts }
 end
 
 format Positive, -1
