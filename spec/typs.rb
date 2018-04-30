@@ -18,3 +18,9 @@ class WithInternalTyp
   is [:>, 0]
   is BiggerAndSmallerThanZero
 end
+
+class StringTyp
+  include Typ
+
+  is_a String
+end
