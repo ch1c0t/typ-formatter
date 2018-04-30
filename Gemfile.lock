@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    typ-formatter (0.0.1)
+    typ-formatter (0.0.2)
       rainbow
       string-indent
 
