@@ -90,7 +90,7 @@ GEM
     rspec-support (3.6.0)
     string-indent (0.0.1)
     thread_safe (0.3.6)
-    typ (0.0.5)
+    typ (0.0.6)
     unparser (0.2.7)
       abstract_type (~> 0.0.7)
       adamantium (~> 0.2.0)
@@ -113,7 +113,7 @@ DEPENDENCIES
   pry-byebug
   rspec
   rspec-power_assert
-  typ
+  typ (>= 0.0.6)
   typ-formatter!
 
 BUNDLED WITH

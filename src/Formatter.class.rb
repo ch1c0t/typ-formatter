@@ -38,7 +38,7 @@ private
   end
 
   def format_is_a gate
-    is_a = "is_a #{gate.class.type}"
+    is_a = "is_a #{gate.class.check}"
 
     if gate.ok?
       Rainbow(is_a).green

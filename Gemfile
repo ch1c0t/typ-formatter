@@ -9,6 +9,6 @@ gem 'byebug'
 gem 'pry-byebug'
 gem 'mutant'
 gem 'mutant-rspec'
-gem 'typ'
+gem 'typ', '>=0.0.6'
 
 gemspec
