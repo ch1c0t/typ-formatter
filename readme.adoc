@@ -13,10 +13,3 @@ To run the specs:
 ----
 bundle exec rspec
 ----
-
-To perform mutation analysis:
-
-[source,bash]
-----
-bundle exec mutant --use rspec 'Typ::Formatter*'
-----

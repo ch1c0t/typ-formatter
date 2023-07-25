@@ -5,10 +5,8 @@ gem 'rspec'
 gem 'rspec-power_assert'
 gem 'pry'
 gem 'awesome_print'
-gem 'byebug'
-gem 'pry-byebug'
-gem 'mutant'
-gem 'mutant-rspec'
 gem 'typ', '>=0.0.6'
+gem 'rake'
+gem 'rerun'
 
 gemspec
