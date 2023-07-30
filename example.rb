@@ -11,3 +11,10 @@ format Positive, -1
 format BiggerAndSmallerThanZero, 1
 format WithInternalTyp, 1
 format StringTyp, :some_symbol
+
+some_hash = {
+  a: 1,
+  b: 2,
+}
+
+format StringTyp, some_hash
