@@ -6,6 +6,7 @@ describe 'a Typ with is_a' do
       #{Rainbow('StringTyp').red}
         #{Rainbow('is_a String').red}
           got Symbol
+            \e[0;36m:not_string\e[0m
     S
 
     typ = StringTyp.new :not_string

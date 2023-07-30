@@ -8,4 +8,5 @@ Gem::Specification.new do |g|
 
   g.add_dependency 'rainbow'
   g.add_dependency 'string-indent'
+  g.add_dependency 'awesome_print'
 end

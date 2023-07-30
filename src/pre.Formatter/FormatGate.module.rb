@@ -1,3 +1,5 @@
+require 'ap'
+
 def format_gate gate
   case gate
   when Typ
@@ -20,6 +22,6 @@ def format_is_a gate
   if gate.ok?
     Rainbow(is_a).green
   else
-    Rainbow(is_a).red + "\n" + "got #{gate.it.class}".indent(2)
+    Rainbow(is_a).red + "\n" + "got #{gate.it.class}".indent(2) + "\n" + gate.it.ai.indent(4)
   end
 end

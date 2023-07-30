@@ -2,6 +2,7 @@ PATH
   remote: .
   specs:
     typ-formatter (0.0.2)
+      awesome_print
       rainbow
       string-indent
 
