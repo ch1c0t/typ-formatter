@@ -5,7 +5,6 @@ gem 'rspec'
 gem 'rspec-power_assert'
 gem 'pry'
 gem 'awesome_print'
-gem 'typ', path: '~/sources/ruby/typ.2023'
 gem 'rake'
 gem 'rerun'
 

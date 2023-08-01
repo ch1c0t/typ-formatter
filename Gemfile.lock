@@ -1,15 +1,11 @@
 PATH
-  remote: ../typ.2023
-  specs:
-    typ (0.0.6)
-
-PATH
   remote: .
   specs:
-    typ-formatter (0.0.2)
+    typ-formatter (0.1.0)
       awesome_print
       rainbow
       string-indent
+      typ (>= 0.1.0)
 
 GEM
   remote: https://rubygems.org/
@@ -52,6 +48,7 @@ GEM
       rspec (>= 2.14)
     rspec-support (3.12.1)
     string-indent (0.0.1)
+    typ (0.1.0)
 
 PLATFORMS
   x86_64-linux
@@ -64,7 +61,6 @@ DEPENDENCIES
   rerun
   rspec
   rspec-power_assert
-  typ!
   typ-formatter!
 
 BUNDLED WITH
