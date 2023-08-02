@@ -24,3 +24,15 @@ class StringTyp
 
   is_a String
 end
+
+class ItsKey
+  include Typ
+
+  its :size, [:==, 3]
+  key 2, [:==, 'some string']
+end
+
+class ItsSize
+  include Typ
+  its :size, [:==, 3]
+end

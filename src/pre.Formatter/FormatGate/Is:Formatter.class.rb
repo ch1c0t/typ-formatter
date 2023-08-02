@@ -1,4 +1,4 @@
-def format gate
+def format
   literal = gate.dsl_literal
 
   case literal

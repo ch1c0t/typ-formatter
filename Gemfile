@@ -7,5 +7,6 @@ gem 'pry'
 gem 'awesome_print'
 gem 'rake'
 gem 'rerun'
+gem 'typ', path: '~/sources/ruby/typ.2023'
 
 gemspec

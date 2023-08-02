@@ -8,6 +8,6 @@ def format_gate gate
   else
     FormatGate
       .const_get(gate.dsl_method.to_pascal_case)
-      .new(gate).to_s
+      .new(gate)
   end
 end

@@ -1,4 +1,4 @@
-def format gate
+def format
   string = "is_a #{gate.dsl_literal}"
 
   if gate.ok?
