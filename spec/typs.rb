@@ -1,38 +1,13 @@
 require 'typ'
 
-class Positive
-  include Typ
-  is [:>, 0]
-end
+Dir["#{__dir__}/typs/*.rb"].each do |file|
+  body = IO.read file
+  name = File.basename file, '.rb'
 
-class BiggerAndSmallerThanZero
-  include Typ
-  
-  is [:>, 0]
-  is [:<, 0]
-end
-
-class WithInternalTyp
-  include Typ
-
-  is [:>, 0]
-  is BiggerAndSmallerThanZero
-end
-
-class StringTyp
-  include Typ
-
-  is_a String
-end
-
-class ItsKey
-  include Typ
-
-  its :size, [:==, 3]
-  key 2, [:==, 'some string']
-end
-
-class ItsSize
-  include Typ
-  its :size, [:==, 3]
+  eval %!
+    class #{name}
+      include Typ
+      #{body}
+    end
+  !
 end
