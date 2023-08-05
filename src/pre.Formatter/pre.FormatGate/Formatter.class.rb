@@ -17,14 +17,24 @@ def head
             end
 end
 
-def gotten
-  @gotten ||= "got #{gate.it.class}".indent(2) + "\n" + gate.it.ai.indent(4)
+def actual
 end
 
 def format
   if gate.ok?
     Rainbow(head).green
   else
-    Rainbow(head).red + "\n" + gotten
+    error = gate.error
+    string = case error
+    when Typ::Error::BadAssertion
+      actual_type = "got #{actual.class}".indent 2
+      actual_value = actual.ai.indent 4
+
+      actual_type + "\n" + actual_value
+    else
+      (error.class.to_s.indent 2) + ":\n" + (error.to_s.indent 4)
+    end
+
+    Rainbow(head).red + "\n" + string
   end
 end
