@@ -21,3 +21,4 @@ format StringTyp, some_hash
 format ItsKey, some_hash
 format ItsSize, some_hash
 format ItsSize, nil
+format KeyTyp, some_hash
