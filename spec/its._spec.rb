@@ -22,7 +22,8 @@ describe 'Its Formatter' do
       expected = <<~S.chomp
         #{Rainbow('ItsSize').red}
           #{Rainbow('its :size [:==, 3]').red}
-            undefined method `size' for nil:NilClass
+            NoMethodError:
+              undefined method `size' for nil:NilClass
       S
 
       typ = ItsSize.new nil
