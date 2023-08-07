@@ -27,3 +27,9 @@ format KeyTyp, some_hash
 format ItsSizeRaw, some_hash
 format ItsSizeRaw, nil
 format KeyTypRaw, some_hash
+
+c = Class.new do
+  include Typ
+  is [:>, 0]
+end
+format c, 0
