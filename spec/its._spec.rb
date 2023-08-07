@@ -17,6 +17,22 @@ describe 'Its Formatter' do
     end
   end
 
+  context 'when the short form was used' do
+    it 'shows the actual value' do
+      expected = <<~S.chomp
+        #{Rainbow('ItsSizeRaw').red}
+          #{Rainbow('its :size 3').red}
+            got Integer
+              \e[1;34m2\e[0m
+      S
+
+      typ = ItsSizeRaw.new [1, 2]
+      f = Typ::Formatter.new typ
+
+      expect(f.to_s).to eq expected
+    end
+  end
+
   context 'when no such method exists' do
     it 'shows that no such method exists' do
       expected = <<~S.chomp

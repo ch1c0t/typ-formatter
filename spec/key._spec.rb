@@ -17,6 +17,22 @@ describe 'Its Formatter' do
     end
   end
 
+  context 'when the short form used' do
+    it 'shows the actual value' do
+      expected = <<~S.chomp
+        #{Rainbow('KeyTypRaw').red}
+          #{Rainbow('key "2" "expected string"').red}
+            got NilClass
+              \e[1;31mnil\e[0m
+      S
+
+      typ = KeyTypRaw.new Hash.new
+      f = Typ::Formatter.new typ
+
+      expect(f.to_s).to eq expected
+    end
+  end
+
   context 'when no such method exists' do
     it 'shows that no such method exists' do
       expected = <<~S.chomp
