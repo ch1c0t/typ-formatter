@@ -33,3 +33,7 @@ c = Class.new do
   is [:>, 0]
 end
 format c, 0
+
+instance = c.new 0
+instance.name = instance.name + ' pose some_location.rb:12'
+puts Typ::Formatter.new instance

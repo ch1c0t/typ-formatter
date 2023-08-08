@@ -2,11 +2,11 @@ require 'string/indent'
 require 'rainbow'
 
 def initialize typ
-  k = typ.class
+  n = typ.name
   @string = if typ.ok?
-              Rainbow(k).green
+              Rainbow(n).green
             else
-              Rainbow(k).red + "\n" + format_gates_of(typ).indent(2)
+              Rainbow(n).red + "\n" + format_gates_of(typ).indent(2)
             end
 end
 
