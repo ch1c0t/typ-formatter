@@ -1,10 +1,10 @@
 PATH
   remote: .
   specs:
-    typ-formatter (0.1.1)
-      awesome_print
-      rainbow
-      string-indent
+    typ-formatter (0.1.2)
+      awesome_print (~> 1.9.2)
+      rainbow (~> 3.1.1)
+      string-indent (~> 0.0.1)
       typ (>= 0.1.2)
 
 GEM
