@@ -1,23 +1,9 @@
-def initialize gate
-  @gate = gate
-  @string = format
-end
-
-attr_reader :gate
-
-def to_s
-  @string
-end
-
 def head
   @head ||= if gate.dsl_key
               "#{gate.dsl_method} #{gate.dsl_key.inspect} #{gate.dsl_literal.inspect}"
             else
               "#{gate.dsl_method} #{gate.dsl_literal}"
             end
-end
-
-def actual
 end
 
 def format
